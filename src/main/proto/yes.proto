@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package yes;
+
+// The SayYes service definition.
+service SayYes {
+  // Yes 
+  rpc Yes (YesRequest) returns (stream YesReply) {}
+  // Yes with flow control
+  rpc YesWithFc (YesRequest) returns (stream YesReply) {}
+}
+
+// The request message
+message YesRequest {
+  string message = 1;
+}
+
+// The response message
+message YesReply {
+  string message = 1;
+}
