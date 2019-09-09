@@ -14,7 +14,7 @@ gRPC Server streaming RPCでフロー制御のサンプルとしてyesコマン�
 
 フロー制御を行わないYes RPCの呼び出し。
 ```
-$ evans -r -p 9090 --package yes --service SayYesService
+$ evans -r -p 9090 --package yes --service SayYes
 
   ______
  |  ____|
