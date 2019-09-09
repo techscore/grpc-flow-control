@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
 @GrpcService
 class SayYesService : SayYesGrpc.SayYesImplBase() {
     val Yes.YesRequest.messageWithDefault: String
-        get() = if (message.isNullOrEmpty()) "yes" else message
+        get() = if (message.isNullOrEmpty()) "y" else message
 
     override fun yes(request: Yes.YesRequest, responseObserver: StreamObserver<Yes.YesReply>) {
         val reply = Yes.YesReply.newBuilder().setMessage(request.messageWithDefault).build()
